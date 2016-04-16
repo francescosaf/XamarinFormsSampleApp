@@ -263,11 +263,11 @@ namespace SampleApp
 
 			DetailStepPage.listView.SelectedItem = null;
 
-			//HERE IS MY ERROR !!
 		}
 
 		private void TappedCell(Step stepContext){
-			
+
+			//HERE IT'S SLOW
 			Button button1 = new Button {
 				Text = "Arrivo",
 				Font = Font.SystemFontOfSize (NamedSize.Micro),

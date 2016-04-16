@@ -1,8 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 using System.ComponentModel;
 
 namespace SampleApp
@@ -11,29 +10,29 @@ namespace SampleApp
 	public class Location
 	{
 
-		[JsonProperty("address")]
+		//[JsonProperty("address")]
 		public string Address { get; set; }
 
-		[JsonProperty("latLng")]
+		//[JsonProperty("latLng")]
 		public int[] LatLng { get; set; }
 
-		[JsonProperty("source")]
+		//[JsonProperty("source")]
 		public string Source { get; set; }
 
-		[JsonProperty("status")]
+		//[JsonProperty("status")]
 		public string Status { get; set; }
 
-		[JsonProperty("geoAddress")]
+		//[JsonProperty("geoAddress")]
 		public string GeoAddress { get; set; }
 	}
 
 	public class TimeWindow
 	{
 
-		[JsonProperty("startSec")]
+		//[JsonProperty("startSec")]
 		public int StartSec { get; set; }
 
-		[JsonProperty("endSec")]
+		//[JsonProperty("endSec")]
 		public int EndSec { get; set; }
 	}
 
@@ -42,70 +41,70 @@ namespace SampleApp
 	public class OrderStep
 	{
 
-		[JsonProperty("id")]
+		//[JsonProperty("id")]
 		public string Id { get; set; }
 
-		[JsonProperty("name")]
+		//[JsonProperty("name")]
 		public string Name { get; set; }
 
-		[JsonProperty("location")]
+		//[JsonProperty("location")]
 		public Location Location { get; set; }
 
-		[JsonProperty("timeWindows")]
+		//[JsonProperty("timeWindows")]
 		public TimeWindow[] TimeWindows { get; set; }
 
-		[JsonProperty("customFields")]
+		//[JsonProperty("customFields")]
 		public Dictionary<string,string> CustomFields { get; set; }
 
-		[JsonProperty("loads")]
+		//[JsonProperty("loads")]
 		public Dictionary<string, int> Loads { get; set; }
 
-		[JsonProperty("notes")]
+		//[JsonProperty("notes")]
 		public string Notes { get; set; }
 	}
 
 	public class StepExecution
 	{
 
-		[JsonProperty("timeInSec")]
+		//[JsonProperty("timeInSec")]
 		public int TimeInSec { get; set; }
 
-		[JsonProperty("status")]
+		//[JsonProperty("status")]
 		public string Status { get; set; }
 
-		[JsonProperty("timeOutSec")]
+		//[JsonProperty("timeOutSec")]
 		public int TimeOutSec { get; set; }
 
-		[JsonProperty("autoTimeInSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
+		//[JsonProperty("autoTimeInSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
 		public int AutoTimeInSec { get; set; }
 
-		[JsonProperty("autoTimeOutSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
+		//[JsonProperty("autoTimeOutSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
 		public int AutoTimeOutSec { get; set; }
 
-		[JsonProperty("pods")]
+		//[JsonProperty("pods")]
 		public Pods Pods { get; set; }
 	}
 
 
 	public class Note
 	{
-		[JsonProperty("text")]
+		//[JsonProperty("text")]
 		public string Text { get; set; }
-		[JsonProperty("sec")]
+		//[JsonProperty("sec")]
 		public int Sec { get; set; }
-		[JsonProperty("latLng")]
+		//[JsonProperty("latLng")]
 		public int[] LatLng { get; set; }
 
 	}
 	public class ImagePod
 	{
-		[JsonProperty("text", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue("")]
+		//[JsonProperty("text", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue("")]
 		public string Text { get; set; }
-		[JsonProperty("token")]
+		//[JsonProperty("token")]
 		public string Token { get; set; }
-		[JsonProperty("sec")]
+		//[JsonProperty("sec")]
 		public int Sec { get; set; }
-		[JsonProperty("latLng")]
+		//[JsonProperty("latLng")]
 		public int[] LatLng { get; set; }
 	}
 
@@ -114,7 +113,7 @@ namespace SampleApp
 		protected Dictionary<string,ImagePod> _si;
 		protected Dictionary<string,ImagePod> _pi;
 
-		[JsonProperty("pictures")]	
+		//[JsonProperty("pictures")]	
 		public Dictionary<string,ImagePod> Pictures {			
 			get {
 				if (null == _pi)
@@ -127,7 +126,7 @@ namespace SampleApp
 				_pi = value;
 			}  
 		}
-		[JsonProperty("signatures")]	
+		//[JsonProperty("signatures")]	
 		public Dictionary<string,ImagePod> Signatures {			
 			get {
 				if (null == _si)
@@ -141,81 +140,81 @@ namespace SampleApp
 			}  
 		}
 
-		[JsonProperty("note")]	
+		//[JsonProperty("note")]	
 		public Note Note { get; set; }
 	}
 
 	public class Step
 	{
 
-		[JsonProperty("type")]
+		//[JsonProperty("type")]
 		public string Type { get; set; }
 
-		[JsonProperty("orderStep")]
+		//[JsonProperty("orderStep")]
 		public OrderStep OrderStep { get; set; }
 
-		[JsonProperty("stepExecution")]
+		//[JsonProperty("stepExecution")]
 		public StepExecution StepExecution { get; set; }
 
-		[JsonProperty("isService")]
+		//[JsonProperty("isService")]
 		public bool IsService { get; set; }
 
-		[JsonProperty("idleSec")]
+		//[JsonProperty("idleSec")]
 		public int IdleSec { get; set; }
 
-		[JsonProperty("arrivalSec")]
+		//[JsonProperty("arrivalSec")]
 		public int ArrivalSec { get; set; }
 
-		[JsonProperty("startSec")]
+		//[JsonProperty("startSec")]
 		public int StartSec { get; set; }
 
-		[JsonProperty("endSec")]
+		//[JsonProperty("endSec")]
 		public int EndSec { get; set; }
 
-		[JsonProperty("driveToNextSec")]
+		//[JsonProperty("driveToNextSec")]
 		public int DriveToNextSec { get; set; }
 
-		[JsonProperty("distanceToNextMt")]
+		//[JsonProperty("distanceToNextMt")]
 		public int DistanceToNextMt { get; set; }
 
-		[JsonProperty("groupId", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
+		//[JsonProperty("groupId", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
 		public int GroupId { get; set; } 
 
-		[JsonProperty("displayLabel")]
+		//[JsonProperty("displayLabel")]
 		public string DisplayLabel { get; set; } 
 
-		[JsonProperty("serviceTimeSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(0)]
+		//[JsonProperty("serviceTimeSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(0)]
 		public int ServiceTimeSec { get; set; }
 
-		[JsonProperty("dispStartSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
+		//[JsonProperty("dispStartSec", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(-1)]
 		public int DispStartSec { get; set; }
 
-		[JsonProperty("dispVehicleId", DefaultValueHandling = DefaultValueHandling.Populate)]
+		//[JsonProperty("dispVehicleId", DefaultValueHandling = DefaultValueHandling.Populate)]
 		public string DispVehicleId { get; set; }
 
 	}
 
-	[JsonObject(IsReference = true)]
+	//[JsonObject(IsReference = true)]
 	public class Route
 	{
 
-		[JsonProperty("revision")]
+		//[JsonProperty("revision")]
 		public int Revision { get; set; }
 
-		[JsonProperty("dispatched", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(true)]
+		//[JsonProperty("dispatched", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(true)]
 		public bool Dispatched { get; set; }
 
-		[JsonProperty("tracked", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(true)]
+		//[JsonProperty("tracked", DefaultValueHandling = DefaultValueHandling.Populate), DefaultValue(true)]
 		public bool Tracked { get; set; }
 
-		[JsonProperty("vehicleId")]
+		//[JsonProperty("vehicleId")]
 		public string VehicleId { get; set; }
 
-		[JsonProperty("date")]
+		//[JsonProperty("date")]
 		public string Date { get; set; }
 
 		protected List<Step> _Steps;
-		[JsonProperty("steps", DefaultValueHandling = DefaultValueHandling.Populate)]
+		//[JsonProperty("steps", DefaultValueHandling = DefaultValueHandling.Populate)]
 		public List<Step> Steps
 		{
 			get
@@ -238,7 +237,7 @@ namespace SampleApp
 
 		protected List<Route> _Routes;
 
-		[JsonProperty("routes")]
+		//[JsonProperty("routes")]
 		public List<Route> Routes
 		{
 			get
@@ -255,7 +254,7 @@ namespace SampleApp
 			}
 		}
 
-		[JsonProperty("eventIssues")]
+		//[JsonProperty("eventIssues")]
 		public Dictionary<string,string> EventIssues;
 
 	}
