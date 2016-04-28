@@ -10,7 +10,7 @@ namespace SampleApp
 		public static ListView listView;
 		StackLayout layout;
 		private static List<StepCellAnimateHeight> m_entries = new List<StepCellAnimateHeight> ();
-		public static Image iconmap;
+		//public static Image iconmap;
 		public DetailStepPage ()
 		{
 			NavigationPage.SetHasNavigationBar(this,true);
@@ -23,8 +23,8 @@ namespace SampleApp
 				HorizontalOptions = LayoutOptions.Center
 			};
 
-			iconmap= new Image { Aspect = Aspect.AspectFit };
-			iconmap.Source = ImageSource.FromFile ("icon_map.png");
+			//iconmap= new Image { Aspect = Aspect.AspectFit };
+			//iconmap.Source = ImageSource.FromFile ("icon_map.png");
 
 			var model = new StepViewModel();
 			BindingContext = model;

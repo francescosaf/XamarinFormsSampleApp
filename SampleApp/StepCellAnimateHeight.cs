@@ -19,7 +19,7 @@ namespace SampleApp
 		public Grid grid;
 		public Grid gridTap;
 		public Grid gridLeftCell;
-
+		public Image iconmap= new Image { Aspect = Aspect.AspectFit };
 		/// <summary>
 		/// The BindableProperty
 		/// </summary>
@@ -227,7 +227,20 @@ namespace SampleApp
 
 
 				// Columns 4, row 0,2
-				grid.Children.Add (DetailStepPage.iconmap, 3, 4, 0, 2);
+				//grid.Children.Add (DetailStepPage.iconmap, 3, 4, 0, 2);
+				var tapImageRecognizer= new TapGestureRecognizer();
+				tapImageRecognizer.Tapped += (s, e) => {
+					var row = (int)((BindableObject)s).GetValue(Grid.RowProperty);
+					var column = (int)((BindableObject)s).GetValue(Grid.ColumnProperty);
+					var itemStemp = (Step)BindingContext;
+				};
+
+
+				iconmap.Source=ImageSource.FromFile ("icon_map.png");
+				iconmap.GestureRecognizers.Add (tapImageRecognizer);
+
+				// Columns 4, row 0,2
+				grid.Children.Add (iconmap, 3, 4, 0, 2);
 
 				var label5 = new Label {
 					TextColor =  AppStyle.ColorTextList,
