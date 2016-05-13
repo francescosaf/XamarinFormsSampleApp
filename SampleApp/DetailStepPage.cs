@@ -28,7 +28,7 @@ namespace SampleApp
 
 			var model = new StepViewModel();
 			BindingContext = model;
-			listView = new ListView(ListViewCachingStrategy.RetainElement) {BackgroundColor = Color.White,SeparatorColor=Color.Black,SeparatorVisibility=SeparatorVisibility.Default};
+			listView = new ListView(ListViewCachingStrategy.RecycleElement) {BackgroundColor = Color.White,SeparatorColor=Color.Black,SeparatorVisibility=SeparatorVisibility.Default};
 			DataTemplate listTemplate = new DataTemplate(typeof(StepCellAnimateHeight));
 			//listTemplate.SetValue (StepCellAnimateHeight.temp, listView);
 			listView.ItemTemplate = listTemplate;
