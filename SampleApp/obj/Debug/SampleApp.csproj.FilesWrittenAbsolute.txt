@@ -1,0 +1,8 @@
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/bin/Debug/SampleApp.dll.mdb
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/bin/Debug/SampleApp.dll
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/obj/Debug/SampleApp.dll
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/obj/Debug/SampleApp.dll.mdb
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/bin/Debug/Xamarin.Forms.Core.dll
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/bin/Debug/Xamarin.Forms.Xaml.dll
+/Users/Francescosaf/Workspace/XamarinPrj/Test/SampleApp/SampleApp/bin/Debug/Xamarin.Forms.Platform.dll

@@ -64,6 +64,20 @@ namespace SampleApp
 				}
 			}
 
+			public string StepType
+			{
+				set
+				{
+					if (StepType != value)
+					{
+						StepType = value;
+					}
+				}
+				get
+				{
+					return StepType;
+				}
+			}	
 
 			public string TestString
 			{
@@ -92,6 +106,7 @@ namespace SampleApp
 					foreach ( Step t in arg.Steps)
 					{
 						TestString=t.Type;
+						StepType=t.Type;
 						StepsObservable.Add (t);
 					}
 					StepCount=StepsObservable.Count;

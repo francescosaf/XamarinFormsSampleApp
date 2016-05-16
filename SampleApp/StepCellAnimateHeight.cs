@@ -271,7 +271,8 @@ namespace SampleApp
 				//VoloMobileBase.LogDebug (" ----> is null");
 
 			if (App.Current.IsExecutableStep (itemStemp)) {
-				DetailStepPage.CellViewAccordionControl (this);
+				//ATTENTION REMOVE THE COMMENT
+				//DetailStepPage.CellViewAccordionControl (this);
 			}
 
 			DetailStepPage.listView.SelectedItem = null;
