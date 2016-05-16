@@ -5,13 +5,13 @@ using System.Linq;
 
 namespace SampleApp
 {
-	public class DetailStepPage : ContentPage
+	public class DetailStepPageOk : ContentPage
 	{
 		public static ListView listView;
 		StackLayout layout;
-		private static List<StepCellAnimateHeight> m_entries = new List<StepCellAnimateHeight> ();
+		private static List<StepCellAnimateHeightOk> m_entries = new List<StepCellAnimateHeightOk> ();
 		//public static Image iconmap;
-		public DetailStepPage ()
+		public DetailStepPageOk ()
 		{
 			NavigationPage.SetHasNavigationBar(this,true);
 			NavigationPage.SetHasBackButton(this, false);
@@ -28,8 +28,8 @@ namespace SampleApp
 
 			var model = new StepViewModel();
 			BindingContext = model;
-			listView = new ListView(ListViewCachingStrategy.RecycleElement) {BackgroundColor = Color.White,SeparatorColor=Color.Black,SeparatorVisibility=SeparatorVisibility.Default};
-			DataTemplate listTemplate = new DataTemplate(typeof(StepCellAnimateHeight));
+			listView = new ListView(ListViewCachingStrategy.RetainElement) {BackgroundColor = Color.White,SeparatorColor=Color.Black,SeparatorVisibility=SeparatorVisibility.Default};
+			DataTemplate listTemplate = new DataTemplate(typeof(StepCellAnimateHeightOk));
 			//listTemplate.SetValue (StepCellAnimateHeight.temp, listView);
 			listView.ItemTemplate = listTemplate;
 			listView.SetBinding (ListView.ItemsSourceProperty, "StepsObservable");
@@ -126,7 +126,7 @@ namespace SampleApp
 		}
 
 
-		public static void CellViewAccordionControl(StepCellAnimateHeight cellViewTapped){
+		public static void CellViewAccordionControl(StepCellAnimateHeightOk cellViewTapped){
 			
 
 			if (cellViewTapped._detailsRow.Height.Value == 0) {

@@ -7,7 +7,7 @@ using SampleApp;
 
 namespace SampleApp
 {
-	public class StepCellAnimateHeight: ViewCell
+	public class StepCellAnimateHeightOk: ViewCell
 	{
 		Label label2;
 		public RowDefinition _detailsRow;
@@ -28,7 +28,7 @@ namespace SampleApp
 		/// Gets/Sets if the cell is in selected state or not
 		/// </summary>
 
-		public StepCellAnimateHeight ()
+		public StepCellAnimateHeightOk ()
 		{
 
 			grid = new Grid {
@@ -271,10 +271,10 @@ namespace SampleApp
 				//VoloMobileBase.LogDebug (" ----> is null");
 
 			if (App.Current.IsExecutableStep (itemStemp)) {
-				DetailStepPage.CellViewAccordionControl (this);
+				DetailStepPageOk.CellViewAccordionControl (this);
 			}
 
-			DetailStepPage.listView.SelectedItem = null;
+			DetailStepPageOk.listView.SelectedItem = null;
 
 		}
 
