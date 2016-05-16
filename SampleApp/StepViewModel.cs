@@ -107,10 +107,9 @@ namespace SampleApp
 					StepsObservable.Clear();
 					foreach ( Step t in arg.Steps)
 					{
-						TestString=t.Type;
-						StepType=t.Type;
-						StepsObservable.Add (t);
-
+					StepType=t.Type;
+					TestString=t.Type;
+					StepsObservable.Add (t);
 					}
 					StepCount=StepsObservable.Count;
 

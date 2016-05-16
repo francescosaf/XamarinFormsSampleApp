@@ -156,7 +156,7 @@ namespace SampleApp
 			grid.Children.Add (label5, 1, 2, 1, 2);
 
 
-
+			TappedCell ();
 
 		}
 
@@ -200,7 +200,7 @@ namespace SampleApp
 		}
 
 
-		private void TappedCell(Step stepContext){
+		private void TappedCell(){
 
 			//HERE IT'S SLOW
 			Button button1 = new Button {

@@ -49,6 +49,7 @@ namespace SampleApp
 			gridLeftCell.RowDefinitions.Add(new RowDefinition { Height = new GridLength(2, GridUnitType.Absolute) });
 			gridLeftCell.RowDefinitions.Add(new RowDefinition { Height = new GridLength(30, GridUnitType.Absolute) });
 
+			/*
 			gridTap= new Grid {
 				Padding = new Thickness(30, Device.OnPlatform(5, 5, 5), 5, 5)	,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -63,7 +64,7 @@ namespace SampleApp
 			gridTap.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(2, GridUnitType.Absolute) });
 			gridTap.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(25, GridUnitType.Absolute) });
 			gridTap.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-
+			*/
 			i++;
 			View = grid;
 			/////-------------- IMPLEMENTATION ------------

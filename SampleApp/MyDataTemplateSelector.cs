@@ -16,13 +16,13 @@ namespace SampleApp
 
 		protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
 		{
-			var messageVm = item as StepViewModel;
-			if (messageVm == null)
-				return null;
+			var stepVM = item as Step;
+			if (stepVM == null)
+				return this.ExecutionDataTemplate;
 			
-			if (messageVm.StepType.CompareTo ("departure") == 0 || messageVm.StepType.CompareTo ("arrival") == 0)
+			if (stepVM.Type.CompareTo ("departure") == 0 || stepVM.Type.CompareTo ("arrival") == 0)
 				return this.DepotDataTemplate;
-			else if (messageVm.StepType.CompareTo ("break") == 0)
+			else if (stepVM.Type.CompareTo ("break") == 0)
 				return this.BreakDataTemplate;
 			else
 				return this.ExecutionDataTemplate;
