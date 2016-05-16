@@ -10,7 +10,7 @@ using SampleApp;
 using SampleApp.iOS;
 
 
-[assembly: ExportRendererAttribute(typeof(StepCellAnimateHeight), typeof(NativeIOSCellRenderer))]
+[assembly: ExportRendererAttribute(typeof(StepCellAnimateHeightOk), typeof(NativeIOSCellRenderer))]
 [assembly: ExportRenderer(typeof(ListView), typeof(CustomListViewRenderer))]
 
 namespace SampleApp.iOS
