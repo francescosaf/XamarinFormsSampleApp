@@ -12,6 +12,7 @@ namespace SampleApp
 			int  stepcount;
 			int   violazionicount;
 			string testString;
+			string stepType;
 
 			public string StepCountText 
 			{   
@@ -64,6 +65,21 @@ namespace SampleApp
 				}
 			}
 
+			public string StepType
+			{
+				set
+				{
+					if (stepType != value)
+					{
+						stepType = value;
+						OnPropertyChanged("StepType");
+					}
+				}
+				get
+				{
+					return stepType;
+				}
+			}	
 
 			public string TestString
 			{
@@ -92,7 +108,9 @@ namespace SampleApp
 					foreach ( Step t in arg.Steps)
 					{
 						TestString=t.Type;
+						StepType=t.Type;
 						StepsObservable.Add (t);
+
 					}
 					StepCount=StepsObservable.Count;
 

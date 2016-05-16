@@ -10,7 +10,7 @@ namespace SampleApp
 
 			var menuPage = new MenuPage ();
 			Master = menuPage;
-			NavigationPage navigationPage = new NavigationPage(new DetailStepPageOk());
+			NavigationPage navigationPage = new NavigationPage(new DetailStepPage());
 			navigationPage.BarBackgroundColor = AppStyle.workwavebackgroundbar;
 			Detail = navigationPage;
 
